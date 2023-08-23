@@ -1,0 +1,144 @@
+.carousel{
+    padding: 81px 0 108px 0;
+    &__inner{
+        position: relative;
+        width: 750px;
+        margin:0 auto;
+    }
+    .slick-prev, .slick-next{
+        border:none;
+        background:none;
+        display: block;
+        position: relative;
+    }
+    .slick-next{
+        
+    }
+    .slick-prev::before{
+        position: absolute;
+        content:'';
+        width: 9px;
+        height: 35px;
+        background: $main-color;
+        transform: rotate(-46deg);
+        top:0;
+        border-radius: 3px;
+    }
+    .slick-prev::after{
+        position: absolute;
+        content:'';
+        width: 9px;
+        height: 35px;
+        background: $main-color;
+        transform: rotate(46deg);
+        bottom:-14px;
+        border-radius:3px;
+    }
+    .slick-next::before{
+        position: absolute;
+        content:'';
+        width: 9px;
+        height: 35px;
+        background: $main-color;
+        transform: rotate(46deg);
+        top:0;
+        border-radius: 3px;
+    }
+    .slick-next::after{
+        position: absolute;
+        content:'';
+        width: 9px;
+        height: 35px;
+        background: $main-color;
+        transform: rotate(-46deg);
+        bottom:-14px;
+        border-radius:3px;
+    }
+    .slick-prev:hover::after, .slick-prev:hover::before{
+        box-shadow: $slide-arrows-shadow;
+        transition: $slide-arrows-transition;
+    }
+    .slick-next:hover::after, .slick-next:hover::before{
+        transition: $slide-arrows-transition;
+        box-shadow: $slide-arrows-shadow;
+    }
+    .slick-prev, .slick-next {
+        border: none;
+        background: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -66px;
+        img{
+            width: 31px;
+            height: 50px;
+        }
+    }
+    .slick-slide{
+        img{
+            width: 100%;
+        }
+    }
+    .slick-next {
+        right: -66px;
+        left: auto;
+    }
+    .tns-item{
+        img{
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+    .tns-nav{
+        border: none;
+        button{
+            background-color: red;
+        }
+        .tns-nav-active{
+            
+            background-color: blue;
+        }
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        list-style-type:none;
+        margin-top: 20px;
+        li{
+            // border: 2px solid $main-color;
+            // border-radius: 3px;
+            margin:0px 3px;
+            button{
+                // padding: 10px 15px;
+                height: 40px;
+                width: 40px;
+                border: 2px solid $main-color;
+                border-radius:4px;
+                background: #fff;
+                color:$main-color;
+                font-weight: 700;
+                transition: 0.4s ease;
+            }
+        }
+    }
+    .slick-dots{
+        .slick-active{
+            button{
+                border:2px solid $main-color;
+                background: $main-color;
+                color:#fff;
+                font-weight: 700;
+                transition: 0.4s ease;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+.carousel{
+    &__inner{
+        max-width: 100%;
+    }
+}
+}

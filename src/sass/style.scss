@@ -1,0 +1,38 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/bootstrap-grid.min';
+@import 'libs/font';
+@import 'libs/slick';
+@import 'libs/magnific-popup';
+@import 'libs/animate';
+
+@import 'base/variables';
+
+* {
+    font-family: 'Museo Sans Cyrl', sans-serif;
+}
+
+.container{
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+}
+iframe{
+    width: 100%; 
+    height: 630; 
+    border: none;
+}
+
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/buttons';
+@import 'blocks/benefits';
+@import 'blocks/titles';
+@import 'blocks/consultation';
+@import 'blocks/forms';
+@import 'blocks/carousel';
+@import 'blocks/catalog';
+@import 'blocks/review';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/pageup';
+@import 'base/animations';
